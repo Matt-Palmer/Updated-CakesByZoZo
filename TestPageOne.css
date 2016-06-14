@@ -93,11 +93,11 @@ header{
 }
 
 .top-nav-list li a.selected{
-	box-shadow: inset 0 -5px 0 0 #3B3738;
+	background-color: #86abd0;
 }
 
 .side-nav-list li a.selected{
-	box-shadow: inset 5px 0 0 0 #3B3738;
+	background-color: #86abd0;
 }
 
 .side-nav{
