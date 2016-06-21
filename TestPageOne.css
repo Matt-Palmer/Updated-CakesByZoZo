@@ -167,17 +167,31 @@ header{
 
 .gallery-selection{
 	display: inline-block;
+	width: 24%;
 }
 
 .gallery-selection a{
+	position: relative;
 	display: block;
-	width: 200px;
-	height: 200px;
-	background-color: lightgray;
+	color: #3B3738;
 }
 
-.gallery-selection-container{
-	width: auto;
+.gallery-selection a span{
+	position: absolute;
+	font-size: 30px;
+	width: 100%;
+	height: 40px;
+	background-color: #86abd0; 
+	bottom: 0;
+	left: 0;
+}
+
+.gallery-selection a:hover span{
+	box-shadow: inset 0 -5px 0 0 #3B3738;	
+}
+
+.gallery-selection a img{
+	width: 100%;
 }
 
 .float-left{
