@@ -1,0 +1,60 @@
+.gallery-selection{
+	display: inline-block;
+	width: 24%;
+}
+
+.gallery-selection a{
+	position: relative;
+	display: block;
+	color: #3B3738;
+}
+
+.gallery-selection a span{
+	position: absolute;
+	font-size: 27px;
+	width: 100%;
+	height: 40px;
+	background-color: #86abd0; 
+	bottom: 0;
+	left: 0;
+	line-height: 40px;
+}
+
+.gallery-selection a:hover span{
+	box-shadow: inset 0 -5px 0 0 #3B3738;	
+}
+
+.gallery-selection a img{
+	width: 100%;
+}
+
+@media (max-width: 1000px){
+	.gallery-selection{
+		display: inline-block;
+		width: 49%;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 800px){
+	.gallery-selection{
+		display: inline-block;
+		width: 24%;
+	}
+}
+
+@media (max-width: 600px){
+	.gallery-selection{
+		display: inline-block;
+		width: 49%;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 400px){
+	.gallery-selection{
+		display: inline-block;
+		width: 90%;
+		margin-top: 10px;
+	}
+}
