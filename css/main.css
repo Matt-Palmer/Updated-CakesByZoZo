@@ -94,10 +94,12 @@ header{
 
 .top-nav-list li a.selected{
 	background-color: #86abd0;
+	color: #FDF3E7;
 }
 
 .side-nav-list li a.selected{
 	background-color: #86abd0;
+	color: #FDF3E7;
 }
 
 .side-nav{
