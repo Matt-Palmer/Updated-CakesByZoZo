@@ -55,7 +55,7 @@
 
 				<p class="center text-center">Please use the form below to give me an idea of what cake you’d like.</p>
                  
-				<div class="form-container">
+				<div class="form-container clearfix">
 
                     <?php echo $result; ?>
                     
@@ -89,8 +89,6 @@
 
 	                        <p class="form-headings">If 'other' please specify:</p>
 	                        <input id="other-input-field" type="text" name="specify-other" class="input-fields" value="<?php echo $_POST['specify-other']; ?>"></input>
-
-
 
                     	</div>
 
