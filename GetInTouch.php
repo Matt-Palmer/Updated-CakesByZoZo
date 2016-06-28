@@ -1,6 +1,6 @@
-<!--<?php
-	//include 'php/form.php';
-?>-->
+<?php
+	include 'php/form.php';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -65,108 +65,128 @@
                     <br>
                     
                     <form name="enquiry-form" method="post">
-                        <p class="form-headings"><span>*</span>Name:</p>
-                        <input type="text" id="required" name="name" class="input-fields" placeholder="Enter your full name" value="<?php echo $_POST['name']; ?>">
+                    	<div class="form-left">
+                    		
+                    		<p class="form-headings"><span>*</span>Name:</p>
+	                        <input type="text" id="required" name="name" class="input-fields" placeholder="Enter your full name" value="<?php echo $_POST['name']; ?>">
 
-                        <p class="form-headings"><span>*</span>Email:</p>
-                        <input type="email" id="required" name="email" class="input-fields" placeholder="Enter your email" value="<?php echo $_POST['email']; ?>">
+	                        <p class="form-headings"><span>*</span>Email:</p>
+	                        <input type="email" id="required" name="email" class="input-fields" placeholder="Enter your email" value="<?php echo $_POST['email']; ?>">
 
-                        <p class="form-headings"><span>*</span>Requested Date:</p>
-                        <input type="date" id="required" name="request-date" class="input-fields" value="<?php echo $_POST['request-date']; ?>">
+	                        <p class="form-headings"><span>*</span>Requested Date:</p>
+	                        <input type="date" id="required" name="request-date" class="input-fields" value="<?php echo $_POST['request-date']; ?>">
 
-                        <p id="occasion-heading" class="form-headings">Whats the occasion?</p>
-                        <select id="occasion" class="selection-field" name="occasion">
-                            <option></option>
-                            <option value="Birthday" <?php if ($_POST['occasion'] == "Birthday") echo 'selected="selected" '; ?>>Birthday</option>
-                            <option value="Wedding" <?php if ($_POST['occasion'] == "Wedding") echo 'selected="selected" '; ?>>Wedding</option>
-                            <option value="Christening" <?php if ($_POST['occasion'] == "Christening") echo 'selected="selected" '; ?>>Christening</option>
-                            <option value="Holy Communion" <?php if ($_POST['occasion'] == "Holy Communion") echo 'selected="selected" '; ?>>Holy Communion</option>
-                            <option value="Other" <?php if ($_POST['occasion'] == "Other") echo 'selected="selected" '; ?>>Other</option>
-                        </select>
+	                        <p id="occasion-heading" class="form-headings">Whats the occasion?</p>
+	                        <select id="occasion" class="selection-field" name="occasion">
 
-                        <p class="form-headings">If 'other' please specify:</p>
-                        <input id="other-input-field" type="text" name="specify-other" class="input-fields" value="<?php echo $_POST['specify-other']; ?>"></input>
+	                            <option></option>
+	                            <option value="Birthday" <?php if ($_POST['occasion'] == "Birthday") echo 'selected="selected" '; ?>>Birthday</option>
+	                            <option value="Wedding" <?php if ($_POST['occasion'] == "Wedding") echo 'selected="selected" '; ?>>Wedding</option>
+	                            <option value="Christening" <?php if ($_POST['occasion'] == "Christening") echo 'selected="selected" '; ?>>Christening</option>
+	                            <option value="Holy Communion" <?php if ($_POST['occasion'] == "Holy Communion") echo 'selected="selected" '; ?>>Holy Communion</option>
+	                            <option value="Other" <?php if ($_POST['occasion'] == "Other") echo 'selected="selected" '; ?>>Other</option>
+	                        </select>
 
-                        <p class="form-headings">Cake Size:</p>
-                        <select id="size" class="selection-field" name="cake-size">
-                            <option></option>
-                            <option value="6" <?php if ($_POST['cake-size'] == "6") echo 'selected="selected" '; ?>>6</option>
-                            <option value="8" <?php if ($_POST['cake-size'] == "8") echo 'selected="selected" '; ?>>8</option>
-                            <option value="10" <?php if ($_POST['cake-size'] == "10") echo 'selected="selected" '; ?>>10</option>
-                            <option value="12" <?php if ($_POST['cake-size'] == "12") echo 'selected="selected" '; ?>>12</option>
-                            <option value="cupcakes" <?php if ($_POST['cake-size'] == "cupcakes") echo 'selected="selected" '; ?>>Cupcakes</option>
-                            <option value="single-number" <?php if ($_POST['cake-size'] == "single-number") echo 'selected="selected" '; ?>>Single number</option>
-                            <option value="double-number" <?php if ($_POST['cake-size'] == "double-number") echo 'selected="selected" '; ?>>Double number</option>
-                        </select>
-
-                        <p id="cupcake-heading" class="form-headings">No Cupcakes:</p>
-                        <select id="no-cupcakes" class="selection-field" name="no-cupcakes">
-                            <option></option>
-                            <option value="6" <?php if ($_POST['no-cupcakes'] == "6") echo 'selected="selected" '; ?>>6</option>
-                            <option value="8" <?php if ($_POST['no-cupcakes'] == "8") echo 'selected="selected" '; ?>>8</option>
-                            <option value="10" <?php if ($_POST['no-cupcakes'] == "10") echo 'selected="selected" '; ?>>10</option>
-                            <option value="12" <?php if ($_POST['no-cupcakes'] == "12") echo 'selected="selected" '; ?>>12</option>
-                        </select>
-
-                        <p id="single-number-selection-heading" class="form-headings">Select Number</p>
-
-                        <select id="single-number-option" class="selection-field single-number-options" name="single-number-option">
-                            <option></option>
-                            <option value="0" <?php if ($_POST['single-number-option'] == "0") echo 'selected="selected" '; ?>>0</option>
-                            <option value="1" <?php if ($_POST['single-number-option'] == "1") echo 'selected="selected" '; ?>>1</option>
-                            <option value="2" <?php if ($_POST['single-number-option'] == "2") echo 'selected="selected" '; ?>>2</option>
-                            <option value="3" <?php if ($_POST['single-number-option'] == "3") echo 'selected="selected" '; ?>>3</option>
-                            <option value="4" <?php if ($_POST['single-number-option'] == "4") echo 'selected="selected" '; ?>>4</option>
-                            <option value="5" <?php if ($_POST['single-number-option'] == "5") echo 'selected="selected" '; ?>>5</option>
-                            <option value="6" <?php if ($_POST['single-number-option'] == "6") echo 'selected="selected" '; ?>>6</option>
-                            <option value="7" <?php if ($_POST['single-number-option'] == "7") echo 'selected="selected" '; ?>>7</option>
-                            <option value="8" <?php if ($_POST['single-number-option'] == "8") echo 'selected="selected" '; ?>>8</option>
-                            <option value="9" <?php if ($_POST['single-number-option'] == "9") echo 'selected="selected" '; ?>>9</option>
-                        </select>
-
-                        <p id="double-number-selection-heading" class="form-headings">Select Numbers:</p>
-
-                        <select id="double-number-option-one" class="selection-field double-number-options" name="double-number-option-one">
-                            <option></option>
-                            <option value="0" <?php if ($_POST['double-number-option-one'] == "0") echo 'selected="selected" '; ?>>0</option>
-                            <option value="1" <?php if ($_POST['double-number-option-one'] == "1") echo 'selected="selected" '; ?>>1</option>
-                            <option value="2" <?php if ($_POST['double-number-option-one'] == "2") echo 'selected="selected" '; ?>>2</option>
-                            <option value="3" <?php if ($_POST['double-number-option-one'] == "3") echo 'selected="selected" '; ?>>3</option>
-                            <option value="4" <?php if ($_POST['double-number-option-one'] == "4") echo 'selected="selected" '; ?>>4</option>
-                            <option value="5" <?php if ($_POST['double-number-option-one'] == "5") echo 'selected="selected" '; ?>>5</option>
-                            <option value="6" <?php if ($_POST['double-number-option-one'] == "6") echo 'selected="selected" '; ?>>6</option>
-                            <option value="7" <?php if ($_POST['double-number-option-one'] == "7") echo 'selected="selected" '; ?>>7</option>
-                            <option value="8" <?php if ($_POST['double-number-option-one'] == "8") echo 'selected="selected" '; ?>>8</option>
-                            <option value="9" <?php if ($_POST['double-number-option-one'] == "9") echo 'selected="selected" '; ?>>9</option>
-                        </select>
-
-                        <select id="double-number-option-two" class="selection-field double-number-options" name="double-number-option-two">
-                            <option></option>
-                            <option value="0" <?php if ($_POST['double-number-option-two'] == "0") echo 'selected="selected" '; ?>>0</option>
-                            <option value="1" <?php if ($_POST['double-number-option-two'] == "1") echo 'selected="selected" '; ?>>1</option>
-                            <option value="2" <?php if ($_POST['double-number-option-two'] == "2") echo 'selected="selected" '; ?>>2</option>
-                            <option value="3" <?php if ($_POST['double-number-option-two'] == "3") echo 'selected="selected" '; ?>>3</option>
-                            <option value="4" <?php if ($_POST['double-number-option-two'] == "4") echo 'selected="selected" '; ?>>4</option>
-                            <option value="5" <?php if ($_POST['double-number-option-two'] == "5") echo 'selected="selected" '; ?>>5</option>
-                            <option value="6" <?php if ($_POST['double-number-option-two'] == "6") echo 'selected="selected" '; ?>>6</option>
-                            <option value="7" <?php if ($_POST['double-number-option-two'] == "7") echo 'selected="selected" '; ?>>7</option>
-                            <option value="8" <?php if ($_POST['double-number-option-two'] == "8") echo 'selected="selected" '; ?>>8</option>
-                            <option value="9" <?php if ($_POST['double-number-option-two'] == "9") echo 'selected="selected" '; ?>>9</option>
-                        </select>
+	                        <p class="form-headings">If 'other' please specify:</p>
+	                        <input id="other-input-field" type="text" name="specify-other" class="input-fields" value="<?php echo $_POST['specify-other']; ?>"></input>
 
 
-                        <p class="form-headings">Sponge Flavour:</p>
-                        <select id="sponge" class="selection-field" name="cake-flavour">
-                            <option></option>
-                            <option value="Vanilla" <?php if ($_POST['cake-flavour'] == "Vanilla") echo 'selected="selected" '; ?>>Vanilla</option>
-                            <option value="Chocolate" <?php if ($_POST['cake-flavour'] == "Chocolate") echo 'selected="selected" '; ?>>Chocolate</option>
-                            <option value="Lemon" <?php if ($_POST['cake-flavour'] == "Lemon") echo 'selected="selected" '; ?>>Lemon</option>
-                        </select>
 
-                        <p class="form-headings"><span>*</span>Message:</p>
-                        <textarea id="message" name="message" class="text-area input-fields" placeholder="Enter your message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+                    	</div>
 
-                        <input id="submit-btn" class="btn" type="submit" name="submit" value="Submit">
+                    	<div class="form-right">
+                    		
+                    		<p class="form-headings">Cake Size:</p>
+	                        <select id="size" class="selection-field" name="cake-size">
+	                            <option></option>
+	                            <option value="6" <?php if ($_POST['cake-size'] == "6") echo 'selected="selected" '; ?>>6</option>
+	                            <option value="8" <?php if ($_POST['cake-size'] == "8") echo 'selected="selected" '; ?>>8</option>
+	                            <option value="10" <?php if ($_POST['cake-size'] == "10") echo 'selected="selected" '; ?>>10</option>
+	                            <option value="12" <?php if ($_POST['cake-size'] == "12") echo 'selected="selected" '; ?>>12</option>
+	                            <option value="cupcakes" <?php if ($_POST['cake-size'] == "cupcakes") echo 'selected="selected" '; ?>>Cupcakes</option>
+	                            <option value="single-number" <?php if ($_POST['cake-size'] == "single-number") echo 'selected="selected" '; ?>>Single number</option>
+	                            <option value="double-number" <?php if ($_POST['cake-size'] == "double-number") echo 'selected="selected" '; ?>>Double number</option>
+	                        </select>
+
+	                        <p id="cupcake-heading" class="form-headings">No Cupcakes:</p>
+	                        <select id="no-cupcakes" class="selection-field" name="no-cupcakes">
+	                            <option></option>
+	                            <option value="6" <?php if ($_POST['no-cupcakes'] == "6") echo 'selected="selected" '; ?>>6</option>
+	                            <option value="8" <?php if ($_POST['no-cupcakes'] == "8") echo 'selected="selected" '; ?>>8</option>
+	                            <option value="10" <?php if ($_POST['no-cupcakes'] == "10") echo 'selected="selected" '; ?>>10</option>
+	                            <option value="12" <?php if ($_POST['no-cupcakes'] == "12") echo 'selected="selected" '; ?>>12</option>
+	                        </select>
+
+	                        <p id="single-number-selection-heading" class="form-headings">Select Number</p>
+
+	                        <select id="single-number-option" class="selection-field single-number-options" name="single-number-option">
+	                            <option></option>
+	                            <option value="0" <?php if ($_POST['single-number-option'] == "0") echo 'selected="selected" '; ?>>0</option>
+	                            <option value="1" <?php if ($_POST['single-number-option'] == "1") echo 'selected="selected" '; ?>>1</option>
+	                            <option value="2" <?php if ($_POST['single-number-option'] == "2") echo 'selected="selected" '; ?>>2</option>
+	                            <option value="3" <?php if ($_POST['single-number-option'] == "3") echo 'selected="selected" '; ?>>3</option>
+	                            <option value="4" <?php if ($_POST['single-number-option'] == "4") echo 'selected="selected" '; ?>>4</option>
+	                            <option value="5" <?php if ($_POST['single-number-option'] == "5") echo 'selected="selected" '; ?>>5</option>
+	                            <option value="6" <?php if ($_POST['single-number-option'] == "6") echo 'selected="selected" '; ?>>6</option>
+	                            <option value="7" <?php if ($_POST['single-number-option'] == "7") echo 'selected="selected" '; ?>>7</option>
+	                            <option value="8" <?php if ($_POST['single-number-option'] == "8") echo 'selected="selected" '; ?>>8</option>
+	                            <option value="9" <?php if ($_POST['single-number-option'] == "9") echo 'selected="selected" '; ?>>9</option>
+	                        </select>
+
+	                        <p id="double-number-selection-heading" class="form-headings">Select Numbers:</p>
+
+	                        <select id="double-number-option-one" class="selection-field double-number-options" name="double-number-option-one">
+	                            <option></option>
+	                            <option value="0" <?php if ($_POST['double-number-option-one'] == "0") echo 'selected="selected" '; ?>>0</option>
+	                            <option value="1" <?php if ($_POST['double-number-option-one'] == "1") echo 'selected="selected" '; ?>>1</option>
+	                            <option value="2" <?php if ($_POST['double-number-option-one'] == "2") echo 'selected="selected" '; ?>>2</option>
+	                            <option value="3" <?php if ($_POST['double-number-option-one'] == "3") echo 'selected="selected" '; ?>>3</option>
+	                            <option value="4" <?php if ($_POST['double-number-option-one'] == "4") echo 'selected="selected" '; ?>>4</option>
+	                            <option value="5" <?php if ($_POST['double-number-option-one'] == "5") echo 'selected="selected" '; ?>>5</option>
+	                            <option value="6" <?php if ($_POST['double-number-option-one'] == "6") echo 'selected="selected" '; ?>>6</option>
+	                            <option value="7" <?php if ($_POST['double-number-option-one'] == "7") echo 'selected="selected" '; ?>>7</option>
+	                            <option value="8" <?php if ($_POST['double-number-option-one'] == "8") echo 'selected="selected" '; ?>>8</option>
+	                            <option value="9" <?php if ($_POST['double-number-option-one'] == "9") echo 'selected="selected" '; ?>>9</option>
+	                        </select>
+
+	                        <select id="double-number-option-two" class="selection-field double-number-options" name="double-number-option-two">
+	                            <option></option>
+	                            <option value="0" <?php if ($_POST['double-number-option-two'] == "0") echo 'selected="selected" '; ?>>0</option>
+	                            <option value="1" <?php if ($_POST['double-number-option-two'] == "1") echo 'selected="selected" '; ?>>1</option>
+	                            <option value="2" <?php if ($_POST['double-number-option-two'] == "2") echo 'selected="selected" '; ?>>2</option>
+	                            <option value="3" <?php if ($_POST['double-number-option-two'] == "3") echo 'selected="selected" '; ?>>3</option>
+	                            <option value="4" <?php if ($_POST['double-number-option-two'] == "4") echo 'selected="selected" '; ?>>4</option>
+	                            <option value="5" <?php if ($_POST['double-number-option-two'] == "5") echo 'selected="selected" '; ?>>5</option>
+	                            <option value="6" <?php if ($_POST['double-number-option-two'] == "6") echo 'selected="selected" '; ?>>6</option>
+	                            <option value="7" <?php if ($_POST['double-number-option-two'] == "7") echo 'selected="selected" '; ?>>7</option>
+	                            <option value="8" <?php if ($_POST['double-number-option-two'] == "8") echo 'selected="selected" '; ?>>8</option>
+	                            <option value="9" <?php if ($_POST['double-number-option-two'] == "9") echo 'selected="selected" '; ?>>9</option>
+	                        </select>
+
+
+	                        <p class="form-headings">Sponge Flavour:</p>
+	                        <select id="sponge" class="selection-field" name="cake-flavour">
+	                            <option></option>
+	                            <option value="Vanilla" <?php if ($_POST['cake-flavour'] == "Vanilla") echo 'selected="selected" '; ?>>Vanilla</option>
+	                            <option value="Chocolate" <?php if ($_POST['cake-flavour'] == "Chocolate") echo 'selected="selected" '; ?>>Chocolate</option>
+	                            <option value="Lemon" <?php if ($_POST['cake-flavour'] == "Lemon") echo 'selected="selected" '; ?>>Lemon</option>
+	                        </select>
+
+	                        <p class="form-headings"><span>*</span>Message:</p>
+	                        <textarea id="message" name="message" class="text-area input-fields" placeholder="Enter your message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+
+	                        
+
+                    	</div>
+                        
+                        <div class="btn-container">
+                        	
+                        	<input id="submit-btn" class="btn" type="submit" name="submit" value="Submit">
+
+                        </div>
+
+                        
+
                     </form>
 
 
@@ -220,6 +240,7 @@
 	<script src="js/jquery-2.2.0.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/menu.js"></script>
+	<script type="text/javascript" src="js/form.js"></script>
 </body>
 
 </html>

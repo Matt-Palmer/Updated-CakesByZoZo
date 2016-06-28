@@ -7,14 +7,13 @@
 */
 
 
-
 /*(1)*/
 /*----------------------------------*/
 /*-----------ALERT MESSAGES---------*/
 /*----------------------------------*/
 .error-container{
     width: 90%;
-    margin: 0 auto;
+    margin: 10px auto;
     background-color: #FF9292;
     border: 1px solid #F21515;
     border-radius: 4px;
@@ -23,7 +22,7 @@
 
 .email-confirmation{
     width: 90%;
-    margin: 0 auto;
+    margin: 10px auto;
     background-color: #CFF1CF;
     border: 1px solid #11C211;
     border-radius: 4px;
@@ -50,6 +49,7 @@
     text-align: center;
     margin: 10px auto 0;
     position: relative;
+    height: 500px;
 }
 
 .required-heading{
@@ -60,7 +60,23 @@
 }
 
 form{
+    position: relative;
     margin-top: 20px;
+    height: 500px;
+}
+
+.form-left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 49%;
+}
+
+.form-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 49%;
 }
 
 .required-heading,
@@ -87,26 +103,27 @@ form{
 .selection-field{
     color: gray;
     margin-bottom: 10px;
-    border-radius: 4px;
+    border-radius: 0px;
     border: 1px solid lightgray;
     width: 95%;
+    height: 35px;
     -webkit-appearance: none; /*allows the styling to remain on iPhones*/
 }
 
 .input-fields,
 .selection-field,
 .text-area{
-    font-family: 'Lora', serif;
+    /*font-family: 'Lora', serif;*/
 }
 
 .input-fields{
     padding: 15px 5px 15px 5px;
-    height: 20px;
     font-weight: normal;
     
 }
 
 .selection-field{
+    position: relative;
     background-color: white;
     padding: 5px;
 }
@@ -124,11 +141,18 @@ form{
     padding: 5px;
 }
 
+.btn-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .btn{
     border: none;
     background-color: #86abd0;
     color: #FDF3E7;
-    width: 95%;
+    width: 60%;
     padding: 10px 10px;
     -webkit-appearance: none;
 }
@@ -211,7 +235,7 @@ form{
     }
         
     .form-container{
-        width: 50%;
+        width: 90%;
     }
 
 }
