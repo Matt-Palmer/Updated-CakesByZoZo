@@ -66,16 +66,12 @@ form{
 }
 
 .form-left{
-    position: absolute;
-    left: 0;
-    top: 0;
+    float: left;
     width: 49%;
 }
 
 .form-right{
-    position: absolute;
-    right: 0;
-    top: 0;
+    float: right;
     width: 49%;
 }
 
@@ -114,6 +110,7 @@ form{
 .selection-field,
 .text-area{
     /*font-family: 'Lora', serif;*/
+    display: block;
 }
 
 .input-fields{
@@ -141,12 +138,12 @@ form{
     padding: 5px;
 }
 
-.btn-container{
+/*.btn-container{
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
-}
+}*/
 
 .btn{
     border: none;
@@ -182,9 +179,7 @@ form{
 
 .double-number-options{
     display: none;
-    width: 46%;
-    float: left;
-    margin-left: 12px;
+    width: 95%;
 }
 /*----------------------------------*/
 /*------------FORM CONTENT----------*/

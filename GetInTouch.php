@@ -55,7 +55,7 @@
 
 				<p class="center text-center">Please use the form below to give me an idea of what cake you’d like.</p>
                  
-				<div class="form-container clearfix">
+				<div class="form-container">
 
                     <?php echo $result; ?>
                     
